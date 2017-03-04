@@ -1,15 +1,17 @@
 // const WebSocket = require('ws');
 var fs = require('fs')
-const {createServer} = require('https')
+const {createServer} = require('http')
 const {createServerFrom} = require('wss')
 
-const https = createServer({
-	key: fs.readFileSync('key.pem'),
-	cert: fs.readFileSync('cert.pem'),
-	NPNProtocols: ['http/1.1', 'http/1.0']
-})
+// const https = createServer({
+// 	key: fs.readFileSync('key.pem'),
+// 	cert: fs.readFileSync('cert.pem'),
+// 	NPNProtocols: ['http/1.1', 'http/1.0']
+// })
 
-createServerFrom(https, function connectionListener (ws) {
+const http = createServer()
+
+createServerFrom(http, function connectionListener (ws) {
 	console.log('new connection');
   ws.send('welcome!')
 
