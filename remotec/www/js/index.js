@@ -61,6 +61,8 @@ var app = {
 
         // alert(navigator.geolocation)
 
+        alert('ready');
+
         navigator.vibrate(1000);
 
         // var updateGeo = function () {
@@ -91,14 +93,14 @@ var app = {
         // }
         // updateGeo();
 
-        navigator.compass.watchHeading(function (heading) {
-            var element = document.getElementById('compass');
-            element.innerHTML = 'magneticHeading: ' + heading.magneticHeading;
-        }, function (compassError) {
-            document.getElementById('compass').innerHTML = 'Compass error: ' + compassError.code;
-        }, {
-            frequency: 1000
-        });
+        // navigator.compass.watchHeading(function (heading) {
+        //     var element = document.getElementById('compass');
+        //     element.innerHTML = 'magneticHeading: ' + heading.magneticHeading;
+        // }, function (compassError) {
+        //     document.getElementById('compass').innerHTML = 'Compass error: ' + compassError.code;
+        // }, {
+        //     frequency: 1000
+        // });
 
         // var options = { frequency: 2000 };
         // var watchID = navigator.accelerometer.watchAcceleration(function (acceleration) {
@@ -134,9 +136,20 @@ var app = {
 app.initialize();
 
 document.getElementById('button-socket').onclick = function () {
-    var ws = new WebSocket('ws://10.10.11.111:8080');
+    alert(1);
+    try {
+        // var ws = new WebSocket('ws://10.10.11.111:8080');
+        var ws = new WebSocket('wss://10.10.11.111:8080')
+    }
+    catch (e) {
+        alert('error');
+        alert(e);
+    }
+
+    alert(2);
 
     ws.onopen = function(){
+        alert(3);
         navigator.vibrate(1000);
 
         navigator.compass.watchHeading(function (heading) {
