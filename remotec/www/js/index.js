@@ -136,7 +136,7 @@ var app = {
 app.initialize();
 
 document.getElementById('button-socket').onclick = function () {
-    alert(1);
+    alert('wss://10.10.11.111:8080');
     try {
         // var ws = new WebSocket('ws://10.10.11.111:8080');
         var ws = new WebSocket('wss://10.10.11.111:8080')
