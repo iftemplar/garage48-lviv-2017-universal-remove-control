@@ -1,0 +1,5 @@
+{
+    "CoreMotion.framework": 2,
+    "CoreLocation.framework": 2,
+    "AudioToolbox.framework": 1
+}

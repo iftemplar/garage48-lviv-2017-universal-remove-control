@@ -1,0 +1,47 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-gyroscope": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-custom-config": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.example.remotec"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "com.example.remotec"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.example.remotec"
+        }
+    }
+}
